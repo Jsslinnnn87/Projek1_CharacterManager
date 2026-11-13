@@ -1,0 +1,22 @@
+# Character Manager — TP3 (Java Visual SIH-6406)
+
+File Main.java adalah kelas utama yang berfungsi sebagai titik eksekusi program (main method) untuk mendemonstrasikan pembuatan objek karakter. File ini juga menguji fitur-fitur seperti kenaikan level (level up), manipulasi mana, pengecekan status kehidupan menggunakan isAlive(), serta menampilkan informasi atribut karakter ke terminal.   
+
+<img width="960" height="564" alt="Screenshot 2026-10-16 075410" src="https://github.com/user-attachments/assets/62d63b73-f30d-475f-bdbd-7639209bb861" />
+
+```
+CharacterManager/
+├── src/
+│   ├── Main.java
+│   └── com/
+│       └── unpri/
+│           └── charactermanager/
+│               └── model/
+│                   ├── Character.java
+│                   └── CharacterType.java
+```
+
+Nama : Jesslin Felixa Pasaribu
+NIM  : 253303621224
+
+Link DOC : https://1drv.ms/w/c/A4248E4F58ABC421/IQBXKXh7EN-WSqJFTbi6z28-AbzDc34foH9gl26UruGn8dc?e=A2WZag
