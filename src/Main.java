@@ -7,18 +7,18 @@ import javax.swing.SwingUtilities;
 public class Main {
     public static void main(String[] args) {
 
-        // 1. Siapkan DATA terlebih dahulu (layer Model) — sama seperti Pertemuan 2
-        CharacterManager manager = new CharacterManager();
-        manager.addCharacter(new Character("Arjuna", CharacterType.WARRIOR, 5));
-        manager.addCharacter(new Character("Merlin", CharacterType.MAGE, 3));
-        manager.addCharacter(new Character("Athena", CharacterType.ARCHER, 4));
-        manager.addCharacter(new Character("Lancelot", CharacterType.WARRIOR, 10));  // karakter baru 1
-        manager.addCharacter(new Character("Selene", CharacterType.HEALER, 2));      // karakter baru 2
+    CharacterManager manager = new CharacterManager();
+    manager.addCharacter(new Character("Arjuna", CharacterType.WARRIOR, 5));
+    manager.addCharacter(new Character("Merlin", CharacterType.MAGE, 3));
+    manager.addCharacter(new Character("Athena", CharacterType.ARCHER, 4));
+    manager.addCharacter(new Character("Gatotkaca", CharacterType.WARRIOR, 7)); // level tinggi
+    manager.addCharacter(new Character("Morgana", CharacterType.MAGE, 1));
+    manager.addCharacter(new Character("Selena", CharacterType.ARCHER, 1));
 
         // 2. Jalankan GUI dengan AMAN di Event Dispatch Thread
         SwingUtilities.invokeLater(() -> {
-            MainWindow window = new MainWindow(manager.getAllCharacters(), manager.getAverageLevel());
-            window.setVisible(true);    // WAJIB — tampilkan jendela
-        });
+    MainWindow window = new MainWindow(manager.getAllCharacters());
+    window.setVisible(true);
+    });
     }
 }
