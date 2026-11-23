@@ -40,7 +40,7 @@ public final class AppTheme {
         }
     }
 
-    /** Teks tooltip per role. */
+    /** Teks tooltip per role.. */
     public static String describe(CharacterType type) {
         switch (type) {
             case WARRIOR: return "Warrior: jarak dekat, HP tinggi";
