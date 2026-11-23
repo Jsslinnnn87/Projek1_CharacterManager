@@ -43,7 +43,7 @@ public class MainWindow extends JFrame {
             mainPanel.add(createCharacterLabel(c));
         }
 
-        add(mainPanel);                             // pasang panel ke JFrame
+        add(mainPanel);                             // pasang panel ke JFrame.
     }
 
     /** Membuat judul layar. */

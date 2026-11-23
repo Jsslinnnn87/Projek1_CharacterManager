@@ -1,7 +1,7 @@
 ## TP10
 
 ### Screenshot MainWindow
-**Sebelum data diubah (rata-rata 4.8):**
+**Sebelum data diubah (rata-rata 4.8):**/
 ![Sebelum](tp10-sebelum.png)
 
 **Sesudah data diubah (rata-rata 6.8):**
