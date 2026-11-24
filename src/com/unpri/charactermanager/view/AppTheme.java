@@ -17,6 +17,9 @@ public final class AppTheme {
     public static final Color TEXT_MAIN  = Color.decode("#dfe6e9"); // teks utama: abu terang
     public static final Color TEXT_LIGHT = Color.WHITE;             // teks di atas kartu berwarna
     public static final Color GOLD       = Color.decode("#fdcb6e"); // aksen untuk karakter level tinggi
+    public static final Color BG_STATUS  = Color.decode("#0d0d1a"); // latar bar status: lebih gelap
+    public static final Color TEXT_MUTED = Color.decode("#9d9dbf"); // teks sekunder / metadata
+    public static final Color BG_CARD = Color.decode("#1e1e2e"); // latar sel statistik
 
     // ---------- Font ----------
     public static final Font FONT_TITLE = new Font("SansSerif", Font.BOLD, 22);   // judul layar
@@ -27,6 +30,8 @@ public final class AppTheme {
     // Border bersifat immutable, jadi aman dipakai ulang oleh banyak komponen.
     public static final Border CARD_BORDER =
             BorderFactory.createEmptyBorder(8, 12, 8, 12); // atas, kiri, bawah, kanan
+                // ---------- Versi ----------
+    public static final String VERSION = "v0.5";
 
     private AppTheme() { }  // class utilitas: konstruktor private mencegah new AppTheme()
 
