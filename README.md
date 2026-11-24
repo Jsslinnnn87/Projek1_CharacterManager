@@ -1,24 +1,39 @@
-## TP10
+## TP12
 
-### Screenshot MainWindow
-**Sebelum data diubah (rata-rata 4.8):**/
-![Sebelum](tp10-sebelum.png)
+![sebelum](sebelum.png)
 
-**Sesudah data diubah (rata-rata 6.8):**
-![Sesudah](tp10-sesudah.png)
+### Wireframe
+![Wireframe](wireframe.png)
 
-**Hasil Output**
-![output](output.png)
+```
++--------------------------------------------+
+| Character Manager              8 karakter  |  NORTH (header)
+| [Total] [Level tertinggi]                  |  NORTH (statistik 2x2)
+| [Rata2] [Jumlah role]                      |
++------------------------------+-------------+
+| Daftar karakter (scroll)     | Legenda     |  CENTER + EAST
++------------------------------+-------------+
+| Total: 8 karakter | Siap          v0.5     |  SOUTH
++--------------------------------------------+
+```
 
-### Mengapa Warna Disimpan di AppTheme, Bukan di Character
-
-Warna adalah urusan tampilan, sedangkan `Character` adalah Model yang hanya menyimpan data game seperti nama, tipe, level, HP, dan ATK. Jika warna ditaruh di `Character`, Model jadi bergantung pada `java.awt` dan melanggar pemisahan MVC. Dengan memusatkan warna di `AppTheme`, mengganti tema cukup dengan mengubah satu file tanpa menyentuh Model maupun logika game. Arah dependensinya juga tetap satu arah: View boleh membaca Model, tetapi Model tidak mengenal View.
-
-### Dua Properti Tambahan
-
-| Properti | Kode | Alasan |
+### Screenshot
+| Ukuran awal | Dilebarkan | Dikecilkan (scrollbar tampak) |
 |---|---|---|
-| Tooltip | `lbl.setToolTipText(AppTheme.describe(c.getType()))` | Pemain bisa melihat penjelasan role (misalnya "Warrior: jarak dekat, HP tinggi") saat kursor diarahkan ke kartu, tanpa memenuhi tampilan dengan teks tambahan. Teksnya dipusatkan di `AppTheme.describe()` sehingga mudah diubah. |
-| Border | `lbl.setBorder(AppTheme.CARD_BORDER)` | Memberi padding agar teks tidak menempel ke tepi kartu, sehingga kartu lebih rapi dan terbaca. Border bersifat immutable dan disimpan sebagai `static final`, jadi aman dipakai ulang oleh semua kartu. |
+| ![](awal.png) | ![](lebar.png) | ![](kecil.png) |
 
-**link docx:** https://1drv.ms/w/c/A4248E4F58ABC421/IQCxm3kWh7TbRp7TvdSSF2_ZAeRb_o9CWNseABIAzfXTPGk?e=lIIoLH
+### Tabel Pengamatan Resize
+| Aksi | Prediksi | Hasil |
+|---|---|---|
+| Jendela dilebarkan | Daftar dan bar status melebar, legenda tetap | (isi setelah uji) |
+| Jendela ditinggikan | Daftar bertambah tinggi, scrollbar hilang jika muat | (isi setelah uji) |
+| Jendela dikecilkan ke batas minimum | Scrollbar muncul, berhenti di 560x380 | (isi setelah uji) |
+
+### Struktur Panel Bersarang
+Jendela memakai `BorderLayout` dengan empat wilayah. Wilayah NORTH berisi panel pembungkus (`BorderLayout`) yang memuat header dan panel statistik `GridLayout` 2x2, dan tiap sel statistik adalah panel kecil bersarang lagi. Wilayah CENTER berisi `JScrollPane` yang membungkus panel kartu `GridLayout`. Wilayah EAST berisi legenda `BoxLayout`, dan SOUTH berisi bar status `BorderLayout`.
+
+### Alasan Panel Tambahan
+Saya memilih `GridLayout` 2x2 karena empat statistik berbobot sama, sehingga sel berukuran seragam dan ikut melebar saat jendela dilebarkan. Saya menolak `FlowLayout` karena sel bisa pindah baris dan bergeser saat jendela dikecilkan, dan `GridBagLayout` karena terlalu rumit untuk 4 sel yang sama besar.
+
+### Bagian D
+[Link Google Docs](https://1drv.ms/w/c/A4248E4F58ABC421/IQD_Yqiv7-l9Rac83L94SVj4AbDlXdpiEVYal88tBlBtVs4?e=f6FB0P) 
