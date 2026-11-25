@@ -138,7 +138,7 @@ public class CharacterFormPanel extends JPanel {
 
     private void clearMessage() {
         messageLabel.setText(" ");
-        nameField.setBorder(nameBorder);                       // pulihkan border asli
+        nameField.setBorder(nameBorder);                       // pulihkan border aslii
         levelSpinner.setBorder(levelBorder);
     }
 }

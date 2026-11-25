@@ -12,6 +12,8 @@ public class Main {
     manager.addCharacter(new Character("Arjuna", CharacterType.WARRIOR, 5));
     manager.addCharacter(new Character("Merlin", CharacterType.MAGE, 3));
     manager.addCharacter(new Character("Athena", CharacterType.ARCHER, 4));
+    manager.addCharacter(new Character("X",      CharacterType.WARRIOR, 100));
+
 
 SwingUtilities.invokeLater(() -> {
     MainWindow window = new MainWindow(manager);   // <-- BERUBAH: manager, bukan getAllCharacters()

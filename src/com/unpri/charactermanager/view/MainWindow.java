@@ -18,7 +18,7 @@ import com.unpri.charactermanager.model.CharacterType;
 
 public class MainWindow extends JFrame {
 
-    private final CharacterManager manager;   // v0.6: menerima MANAGER, bukan salinan list
+    private final CharacterManager manager;   // v0.6: menerima MANAGER, bukan salinan listt
     private JPanel cardsPanel;                // field: isinya diganti setiap refresh
     private JLabel countLabel;                // field: jumlah di header
     private JLabel statusLabel;               // field: teks di bar status

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * Mengelola koleksi Character: tambah, cari, hapus, dan statistik dasar.
- * Menerapkan Composition: CharacterManager "has-a" ArrayList<Character>.
+ * Menerapkan Composition: CharacterManager "has-a" ArrayList<Character>..
  */
 public class CharacterManager {
 

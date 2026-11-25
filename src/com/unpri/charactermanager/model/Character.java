@@ -21,11 +21,14 @@ public class Character {
         if (name == null || name.isBlank()) {                       // aturan 1: nama wajib
         throw new IllegalArgumentException("Nama tidak boleh kosong");
     }
-    if (type == null) {                                         // aturan 2: role wajib
+    if (type == null) {                                         // aturan 2: role wajibb
         throw new IllegalArgumentException("Role wajib dipilih");
     }
     if (level < 1 || level > 99) {                              // aturan 3: rentang level
         throw new IllegalArgumentException("Level harus 1-99");
+    }
+    if (type == CharacterType.MAGE && level > 60) {             // aturan 4: konsistensi role + level
+    throw new IllegalArgumentException("Level MAGE maksimal 60 (diminta: " + level + ")");
     }
         this.name = name;              // "this" merujuk ke atribut milik object ini
         this.type = type;
