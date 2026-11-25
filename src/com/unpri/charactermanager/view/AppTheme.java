@@ -20,6 +20,8 @@ public final class AppTheme {
     public static final Color BG_STATUS  = Color.decode("#0d0d1a"); // latar bar status: lebih gelap
     public static final Color TEXT_MUTED = Color.decode("#9d9dbf"); // teks sekunder / metadata
     public static final Color BG_CARD = Color.decode("#1e1e2e"); // latar sel statistik
+    public static final Color ERROR   = Color.decode("#ff7675"); // merah terang: terbaca di latar gelap
+    public static final Color SUCCESS = Color.decode("#55efc4"); // hijau terang untuk pesan berhasil
 
     // ---------- Font ----------
     public static final Font FONT_TITLE = new Font("SansSerif", Font.BOLD, 22);   // judul layar

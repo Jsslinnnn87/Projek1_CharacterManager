@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * Mengelola koleksi Character: tambah, cari, hapus, dan statistik dasar.
- * Menerapkan Composition: CharacterManager "has-a" ArrayList<Character>.
+ * Menerapkan Composition: CharacterManager "has-a" ArrayList<Character>..
  */
 public class CharacterManager {
 
@@ -85,5 +85,14 @@ public class CharacterManager {
         }
         return hasil;
     }
+
+    public boolean isNameTaken(String name) {
+    for (Character c : getAllCharacters()) {            // memakai method yang sudah ada
+        if (c.getName().equalsIgnoreCase(name)) {       // "arjuna" dianggap sama dengan "Arjuna"
+            return true;
+        }
+    }
+    return false;
+}
 
 }
